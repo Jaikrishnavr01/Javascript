@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Canvas Application</title>
+</head>
+<body>
+    <!-- Canvas element for 3D rendering -->
+    <canvas id="canvas3d" width="800" height="600"></canvas>
+
+    <!-- Include the @splinetool/runtime module -->
+    <script type="module">
+        import { Application } from 'https://unpkg.com/@splinetool/runtime?module';
+
+        const canvas = document.getElementById('canvas3d');
+        const app = new Application(canvas);
+        app.load('https://unpkg.com/@splinetool/viewer@1.0.54/build/spline-viewer.js');
+    </script>
+</body>
+</html>

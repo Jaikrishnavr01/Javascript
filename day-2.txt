@@ -1,0 +1,25 @@
+Difference  between  var, let, and const:
+      
+        global     local     block   redeclearation     Reassign     Hositing 
+
+
+
+var       yes       yes      -             yes             yes         yes
+
+*let       yes       yes      yes        -                 yes         yes
+
+*const     yes       yes      yes        -                 -          -
+
+
+
+
+hosting:  use the variable before declaration
+
+
+
+
+if the values is not defined it will  print undefined  in var keyword.
+
+
+datatype
+datatype its the type of data that it can hold (Differnt values).

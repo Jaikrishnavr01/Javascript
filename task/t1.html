@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            background-color: #ccc;
+            transition: 5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>1. Change Text Content: create a webpage containing a element with some initial text. Using JavaScript, instruct
+        them to replace the text content of the paragraph with a new message when a button is clicked.</h1>
+        <input type="text" name="" id="input1" placeholder="Find the right one">
+        <button onclick="btn1()">Find the right one</button>
+        <h4>output in Para 👇</h4>
+        <p id="p1">enter your text</p>
+
+
+        <hr>
+
+        <h3>2. Toggle Visibility: create a webpage with an image and a button. When the button is clicked, toggle the
+            visibility of the image (i.e., hide it if it's visible, show it if it's hidden) using JavaScript.</h3>
+
+        <img src="https://images.pexels.com/photos/11055562/pexels-photo-11055562.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            width="10%" alt="CoupleImage" id="image">
+        <br>
+        <button onclick="toggleVisibility()">Toggle Image Visibility</button>
+
+        <hr>
+
+        <div id="div1">
+            <h3>3. Manipulate Styles: create a webpage containing a button. When the button is clicked, change the
+                background color of the webpage using JavaScript.</h3>
+            <button onclick="changeBackgroundColor()">Change Background Color</button>
+        </div>
+
+        <hr>
+
+        <h3>4. Create Elements: create a webpage with an empty div element. Using JavaScript, instruct them to
+            dynamically create and append a new p element with some text content inside the div when a button is
+            clicked.</h3>
+
+        <div id="container">
+
+        </div>
+        <button onclick="createParagraph()">Create Paragraph</button>
+
+        <hr>
+
+        <h3>5. Handle Form Input: create a simple form with an input field and a button. When the button is clicked, get
+            the value entered by the user in the input field and display it on the webpage using JavaScript.</h3>
+
+        <form id="myForm">
+            <input type="text" id="textInput" placeholder="Enter your text here">
+            <button type="button" onclick="displayInputValue()">Submit</button>
+        </form>
+
+        <div id="output"></div>
+
+        <hr>
+        <h3>6. Event Handling: create a webpage with an h1 element and a button. When the button is clicked, change the
+            text content of the h1 element to a predefined message using JavaScript.</h3>
+
+        <h1 id="heading-1">The Original Heading</h1>
+        <button id="changeButton-1">Change Heading</button>
+
+        <hr>
+
+        <h3>7. Mouse Events: create a webpage with a div element. When the mouse enters the div, change its background
+            color using JavaScript. When the mouse leaves the div, revert its background color to the original.</h3>
+
+        <div id="myDiv">Hover over me to change the color</div>
+
+
+        <hr>
+        <h3>8. Map Function: Use arrow functions with map() to double each element in an array.</h3>
+        <button onclick="p8()">click here to run arrow function</button>
+        <p id="p8"></p>
+
+        <hr>
+        <h3>9. Filter Function: Use arrow functions with filter() to filter out even numbers from an array.</h3>
+        <button onclick="p9()">click here to run sort in arrow function</button>
+        <p id="p9"></p>
+
+        <hr>
+        <h3>10. Arrow functions Task - Write an arrow function that takes two parameters and returns their sum.</h3>
+        <button id="calculateBtn">submit</button>
+        <p id="p10"></p>
+        <hr>
+        <h3>11. Write an arrow function that takes an array of numbers and returns the sum of all the numbers.</h3>
+        <button id="calculateBtn1">Calculate Total</button>
+        <p id="p11"></p>
+
+        <hr>
+
+        <h3>12. Write an arrow function that takes a string and returns the length of the string</h3>
+        <button id="calculateBtn2"> submit</button>
+        <p id="p12"></p>
+
+
+        <hr>
+
+        <h3>13. Write an arrow function that takes an array of numbers and returns a new array containing only the even
+            numbers</h3>
+        <button id="calculateBtn3">submit</button>
+        <p id="p13"></p>
+
+        <hr>
+
+        <h3>14. Write an arrow function that takes a number and returns its square.</h3>
+        <input type="number" id="input2">
+        <button onclick="calculateSquare()">submit</button>
+        <h5>square root is <spam id="p14"></span></h5>
+
+        <hr>
+
+        <h3>15. Write an arrow function that takes an array of strings and returns a new array with the lengths of each
+            string.</h3>
+
+        <button onclick="len()">submit</button>
+        <h5>Array of string length is <spam id="p15"></span> </h5>
+        <hr>
+
+        <h3>16.	Write an arrow function that takes an array of numbers and returns the product of all the numbers.</h3>
+        <button onclick="arrofnum()">submit</button>
+        <h5>product Of Numbers <spam id="p16"></span> </h5>
+
+
+        <script>
+            function btn1() {
+                let inputText = document.getElementById("input1").value;
+                let p1Content = document.getElementById("p1");
+                p1Content.textContent = "your text is: ->   " + inputText;
+            }
+
+            /* **********************2********************** */
+
+            function toggleVisibility() {
+                var image = document.getElementById("image");
+                if (image.style.display === "none") {
+                    image.style.display = "block";
+                } else {
+                    image.style.display = "none";
+                }
+            }
+
+            /* *******************3************************** */
+
+            function changeBackgroundColor() {
+                var body = document.getElementById('div1');
+                const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                body.style.backgroundColor = randomColor;
+            }
+
+            /* ********************4************************ */
+
+            function createParagraph() {
+                var paragraph = document.createElement('p');
+
+                paragraph.textContent = `This is a dynamically created paragraph!`;
+                var container = document.getElementById('container');
+                container.appendChild(paragraph);
+            }
+
+            /* ********************5************************ */
+
+            function displayInputValue() {
+                var inputValue = document.getElementById('textInput').value;
+                var outputDiv = document.getElementById('output');
+                outputDiv.textContent = "You entered: " + inputValue;
+            }
+
+            /* ********************6*********************** */
+
+            var button = document.getElementById('changeButton-1');
+
+            button.addEventListener('click', function () {
+
+                var headingElement = document.getElementById('heading-1');
+
+                headingElement.textContent = "New updated Heading ";
+            });
+
+
+            /* *********************7********************** */
+            const divElement = document.getElementById('myDiv');
+
+            divElement.addEventListener('mouseenter', function () {
+                divElement.style.backgroundColor = 'lightyellow';
+            });
+
+
+            divElement.addEventListener('mouseleave', function () {
+                divElement.style.backgroundColor = 'pink';
+            });
+
+
+            /* *********************8********************** */
+
+            function p8() {
+                const numbers = [1, 2, 3, 4, 5];
+                const doubledNumbers = numbers.map((number) => number * 2);
+                let text = document.getElementById("p8")
+                text.innerHTML = doubledNumbers
+            }
+
+            /* *********************9********************** */
+
+            function p9() {
+                const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+                const evenNumbers = numbers.filter((number) => number % 2 === 0);
+
+                let text = document.getElementById("p9")
+                text.innerHTML = evenNumbers
+                console.log;
+
+            }
+
+            /* *********************10********************* */
+            let num1 = 20;
+            let num2 = 20;
+
+            let arrowfun = (a, b) => {
+                const sum = a + b;
+                let text = document.getElementById("p10");
+                text.innerHTML = sum;
+            };
+
+            document.getElementById("calculateBtn").addEventListener("click", function () {
+                arrowfun(num1, num2);
+            });
+
+
+
+            /* *******************11************************ */
+
+            let array1 = [12, 13, 14, 10];
+
+            let arrowFunction = (array1) => {
+                let countTotal = array1.reduce((total, element) => total + element, 1);
+                let text = document.getElementById("p11");
+                text.innerHTML = countTotal;
+            };
+
+            document.getElementById("calculateBtn1").addEventListener("click", function () {
+                arrowFunction(array1);
+            });
+
+            /* ******************12******************** */
+
+
+
+            let myString = "Hello, World!";
+            let stringLength = str => str.length;
+            let lengthOfString = stringLength(myString);
+
+
+
+            document.getElementById("calculateBtn2").addEventListener("click", function () {
+                let text = document.getElementById("p12");
+                text.innerHTML = lengthOfString;
+            });
+
+            /* *******************13******************** */
+
+            // 13.	Write an arrow function that takes an array of numbers and returns a new array containing only the even numbers
+
+            let array2 = [2, 1, 4, 5, 6];
+
+            let evenNumbers = () => {
+                return array2.filter(element => element % 2 === 0);
+            };
+
+            let newArray = evenNumbers();
+
+            document.getElementById("calculateBtn3").addEventListener("click", function () {
+                let text = document.getElementById("p13");
+                text.innerHTML = newArray;
+            });
+
+
+            /* ***********************14********************************** */
+            const calculateSquare = () => {
+                const input2 = document.getElementById("input2");
+                const resultParagraph = document.getElementById("p14");
+
+                const num = parseInt(input2.value);
+                const square = num * num;
+
+                resultParagraph.textContent = square;
+            }
+
+
+            /* **********************15********************************** */
+
+
+            const stringLengths = (arrayOfStrings) => {
+                return arrayOfStrings.map(str => str.length);
+            };
+
+
+
+            const len = () => {
+                const arrayOfStrings = ["apple", "banana", "orange"];
+                const lengths = stringLengths(arrayOfStrings);
+                const resultParagraph = document.getElementById("p15");
+
+                resultParagraph.textContent = lengths;
+            }
+
+
+            /*** *************************16******************************/
+
+            const productOfNumbers = (arrayOfNumbers) => {
+                return arrayOfNumbers.reduce((accumulator, currentValue) => accumulator * currentValue, 1);
+            };
+            const arrofnum = () =>{
+
+                const numbers = [2, 3, 4, 5];
+                const product = productOfNumbers(numbers);
+                console.log(product);
+                const resultParagraph = document.getElementById("p16");
+                resultParagraph.textContent = product;
+            }
+
+
+
+
+
+
+
+
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <button onclick="btn1()">submit</button>
+    <p id="p1">hello</p>
+    
+    <script>
+        let texts = ["jai", "bonjour", "hola"];
+        let currentIndex = 0; 
+    
+        const btn1 = () => {
+            const p1 = document.getElementById("p1");
+            p1.innerHTML = texts[currentIndex];
+            currentIndex = (currentIndex + 1) % texts.length; 
+        };
+    </script>
+    
+    
+    
+</body>
+</html>

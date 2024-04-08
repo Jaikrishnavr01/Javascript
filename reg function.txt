@@ -1,0 +1,79 @@
+<!-- //Regular expressions -->
+
+<!-- Used for pattern matching or string matching -->
+
+[abc] = a,b or c
+
+[^abc] = any character other than a,b,case
+
+[a-z] = a to z
+
+[A-Z] = caps a to Z
+
+[a-z A-Z] = upper and lowercase
+
+[0-9] = 0 to 9
+
+quantifiers:
+
+[ ]? = occurs 0 or 1 time
+
+[ ] + = occurs 1 or more times
+
+[ ]* = occurs 0 or more times
+
+[ ] {} = occurs n times
+
+
+[ ] {y,z} = occurs atleast y times but less than z times
+
+
+Meta characters:
+
+\d = [0-9]
+
+\D = [^0-9] 
+
+\w = [a-z A-Z _ 0-9]
+
+
+<!-- Examples: Mobile number start with 8 or 9 and total digits = 10
+
+  first character upper case, contains lower case alphabets, only one digit allowed in between lowercase.
+
+  Email ID: arUN123@gmail.com (_-.)
+-->
+
+   [8967][0-9]{9}
+
+  [A-Z][a-z][0-9][a-z]
+
+   [a-z A-Z][0-9]+[@][a-z]*+[\.][a-z]{2}
+
+
+
+   eg : 
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regular Expression Examples</title>
+</head>
+<body>
+
+<form action="#">
+  <label for="mobile">Mobile Number:</label><br>
+  <input type="text" id="mobile" name="mobile" pattern="[8967][0-9]{9}" title="Please enter a valid 10-digit mobile number starting with 8, 9, 6, or 7"><br><br>
+
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username" pattern="[A-Z][a-z][0-9][a-z]" title="Please enter a valid username with the first character uppercase, followed by a lowercase alphabet, a digit, and another lowercase alphabet"><br><br>
+
+  <label for="email">Email ID:</label><br>
+  <input type="email" id="email" name="email" pattern="[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2}" title="Please enter a valid email address"><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

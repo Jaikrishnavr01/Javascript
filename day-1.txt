@@ -1,0 +1,26 @@
+// using html we can create static website 
+// using bootstrap and css to make the site responsive
+
+// using javascript (es6) we can make dynamic website 
+// it is a client side scripting langanuge'
+// 
+
+// before senting the data to server it maluplates
+
+
+
+dymanic website 
+           built using the server side language, eg; instagram 
+
+
+
+
+ programming language?
+                    a programming  language is set of instructions that devlopers use to create s.oftware , which user  can in turn deploy to interact with comuputers.
+
+                    it is used to statify the the user defined task
+
+
+
+
+
